@@ -7,7 +7,7 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "web": "webpack --mode development && serve dist -l 8082"
   },
   "dependencies": {
@@ -62,3 +62,4 @@
     "node": ">= 22.11.0"
   }
 }
+

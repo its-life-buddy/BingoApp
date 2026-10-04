@@ -78,6 +78,14 @@ android {
     compileSdk rootProject.ext.compileSdkVersion
 
     namespace "com.kartheek.bingoapp"
+        splits {
+        abi {
+            reset()
+            enable true
+            universalApk false
+            include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+    }
     defaultConfig {
         applicationId "com.kartheek.bingoapp"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -123,3 +131,4 @@ dependencies {
         implementation jscFlavor
     }
 }
+
