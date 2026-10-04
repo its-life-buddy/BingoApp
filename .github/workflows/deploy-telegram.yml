@@ -39,12 +39,17 @@ jobs:
       - name: Decode Keystore & Configure Signing
         env:
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_ENCODED }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
           echo "$KEYSTORE_BASE64" | base64 -d > android/app/my-release-key.keystore
           echo "MYAPP_UPLOAD_STORE_FILE=my-release-key.keystore" >> android/gradle.properties
-          echo "MYAPP_UPLOAD_STORE_PASSWORD=${{ secrets.KEYSTORE_PASSWORD }}" >> android/gradle.properties
-          echo "MYAPP_UPLOAD_KEY_ALIAS=${{ secrets.KEY_ALIAS }}" >> android/gradle.properties
-          echo "MYAPP_UPLOAD_KEY_PASSWORD=${{ secrets.KEY_PASSWORD }}" >> android/gradle.properties
+          
+          # Use printf to safely write passwords that might contain special characters
+          printf "MYAPP_UPLOAD_STORE_PASSWORD=%s\n" "$KEYSTORE_PASSWORD" >> android/gradle.properties
+          printf "MYAPP_UPLOAD_KEY_ALIAS=%s\n" "$KEY_ALIAS" >> android/gradle.properties
+          printf "MYAPP_UPLOAD_KEY_PASSWORD=%s\n" "$KEY_PASSWORD" >> android/gradle.properties
 
       - name: Build Android Release APK
         working-directory: android
