@@ -4,7 +4,6 @@ import {
   View,
   Text,
   TouchableOpacity,
-  ActivityIndicator,
   Image,
 } from 'react-native';
 import { supabase } from '../lib/supabase';

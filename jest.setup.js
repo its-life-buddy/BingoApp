@@ -1,3 +1,4 @@
+/* eslint-env jest */
 // jest.setup.js
 // Mock react-native-url-polyfill
 jest.mock('react-native-url-polyfill/auto', () => {}, { virtual: true });

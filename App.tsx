@@ -33,7 +33,6 @@ import {
 import { RobotOpponent } from './src/domain/engine/robotOpponent';
 import { AntiCheatValidator } from './src/domain/multiplayer/antiCheatValidator';
 import { SoundEngine } from './src/audio/soundEngine';
-import { COLORS } from './src/design/tokens';
 import { ThemeProvider, useTheme } from './src/design/theme';
 import { useMultiplayerRoom } from './src/domain/state/useMultiplayerRoom';
 import { supabase } from './src/lib/supabase';
@@ -95,7 +94,7 @@ function MainApp() {
   // Active Boards (Single or Multi-card)
   const [board, setBoard] = useState<Board5x5 | null>(null);
   const [additionalBoards, setAdditionalBoards] = useState<Board5x5[]>([]);
-  const [numberPool, setNumberPool] = useState<number[]>([]);
+  const [numberPool, setNumberPool] = useState<number[]>([]); // eslint-disable-line @typescript-eslint/no-unused-vars
   const [drawnNumbers, setDrawnNumbers] = useState<number[]>([]);
   const [score, setScore] = useState(0);
   const [linesCompletedCount, setLinesCompletedCount] = useState(0);
@@ -121,7 +120,7 @@ function MainApp() {
   const [matchCountdown, setMatchCountdown] = useState<number | null>(null);
 
   // Helper to calculate new rating/tier and apply to player state
-  const applyMatchOutcome = (isWin: boolean, mode: string, score: number, linesCompletedCount: number, ratingDelta: number) => {
+  const applyMatchOutcome = (isWin: boolean, mode: string, matchScore: number, matchLines: number, ratingDelta: number) => {
     setPlayer((prev) => {
       // Calculate MMR Delta
       const newRating = Math.max(1000, (prev.rating || 1000) + ratingDelta);
@@ -140,12 +139,12 @@ function MainApp() {
       const newCoins = Math.max(0, prev.coins + coinDelta);
 
       // Record to DB asynchronously
-      leaderboardService.recordMatchResult(prev.id, isWin, mode, score, linesCompletedCount, ratingDelta);
+      leaderboardService.recordMatchResult(prev.id, isWin, mode, matchScore, matchLines, ratingDelta);
 
       return {
         ...prev,
         coins: newCoins,
-        score: prev.score + score + (isWin ? 1000 : 0),
+        score: prev.score + matchScore + (isWin ? 1000 : 0),
         rating: newRating,
         tier: newTier,
       };
@@ -156,8 +155,8 @@ function MainApp() {
   const multiplayer = useMultiplayerRoom({
     player,
     onNavigateToScreen: setScreenState,
-    onMatchEnd: (isWin, mode, score, linesCompletedCount, ratingDelta) => {
-      applyMatchOutcome(isWin, mode, score, linesCompletedCount, ratingDelta);
+    onMatchEnd: (isWin, mode, matchScore, matchLines, ratingDelta) => {
+      applyMatchOutcome(isWin, mode, matchScore, matchLines, ratingDelta);
     }
   });
 
@@ -172,6 +171,7 @@ function MainApp() {
           await supabase.auth.signOut();
           await AsyncStorage.removeItem('bingo_user_session');
           if (Platform.OS === 'web') {
+            // eslint-disable-next-line no-alert
             window.alert('Your account has been suspended due to multiple reports.');
           } else {
             Alert.alert('Account Suspended', 'Your account has been suspended due to multiple reports.');
@@ -224,7 +224,7 @@ function MainApp() {
             return;
           }
         }
-      } catch (e) {
+      } catch (_e) {
         // Fallback gracefully
       }
 
@@ -253,7 +253,7 @@ function MainApp() {
   const handleLogout = async () => {
     try {
       await supabase.auth.signOut();
-    } catch (e) {
+    } catch (_e) {
       // Safe ignore
     }
     await AsyncStorage.removeItem('bingo_user_session');
@@ -280,6 +280,7 @@ function MainApp() {
         };
 
         if (Platform.OS === 'web') {
+          // eslint-disable-next-line no-alert
           const shouldQuit = typeof window !== 'undefined' && window.confirm 
             ? window.confirm('Are you sure you want to quit the current match?')
             : true;
@@ -476,6 +477,7 @@ function MainApp() {
     
     if (player.coins < totalCost) {
       if (Platform.OS === 'web') {
+        // eslint-disable-next-line no-alert
         window.alert(`Insufficient coins. You need 🪙 ${totalCost} to enter this room.`);
       } else {
         Alert.alert('Insufficient Coins', `You need 🪙 ${totalCost} to enter this room.`);
@@ -500,6 +502,7 @@ function MainApp() {
     setShowDailyBonusModal(false);
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleBuyStoreItem = (item: StoreItem) => {
     if (item.category === 'COINS') {
       const addedCoins = item.id === 'c1' ? 500 : item.id === 'c2' ? 2500 : 10000;
@@ -620,7 +623,7 @@ function MainApp() {
         setTurnExpiresAt(Date.now() + 10000);
       }
     },
-    [board, additionalBoards, isGameActive, drawnNumbers, completedPatternIds, gameMode, currentTurnPlayerId, player.id, matchStartTime]
+    [board, additionalBoards, isGameActive, drawnNumbers, completedPatternIds, gameMode, currentTurnPlayerId, player.id, matchStartTime, linesCompletedCount, score]
   );
 
   // Solo Claim Bingo
@@ -644,13 +647,14 @@ function MainApp() {
 
     applyMatchOutcome(true, gameMode, score, linesCompletedCount, 20);
     setScreenState('RESULTS');
-  }, [board, isGameActive, linesCompletedCount, score, matchStartTime, player.id, gameMode]);
+  }, [board, isGameActive, linesCompletedCount, score, matchStartTime, gameMode]);
 
   useEffect(() => {
     // Only upsert if it's an authenticated Supabase user profile
     if (!player.id.startsWith('player-')) {
       leaderboardService.upsertPlayer(player);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [player.rating, player.tier]);
 
   // Turn-based logic & timeouts for AI Mode
@@ -748,6 +752,7 @@ function MainApp() {
         if (callerIntervalRef.current) clearInterval(callerIntervalRef.current);
       };
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gameMode, screenState, isGameActive, isPaused, matchStartTime, currentTurnPlayerId, turnExpiresAt, player.id]);
 
   return (

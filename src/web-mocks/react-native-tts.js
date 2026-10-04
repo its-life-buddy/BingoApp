@@ -1,3 +1,4 @@
+/* eslint-env browser */
 module.exports = {
   __esModule: true,
   default: {

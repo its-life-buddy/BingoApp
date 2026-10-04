@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, Text, Animated, Easing } from 'react-native';
-import { COLORS, RADIUS, SPACING, TYPOGRAPHY } from '../design/tokens';
+import { RADIUS, SPACING, TYPOGRAPHY } from '../design/tokens';
 
 interface SplashScreenProps {
   onFinish: () => void;

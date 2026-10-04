@@ -22,7 +22,6 @@ interface SignInScreenProps {
 }
 
 export const SignInScreen: React.FC<SignInScreenProps> = ({
-  currentName,
   onLogin,
 }) => {
   const { theme } = useTheme();

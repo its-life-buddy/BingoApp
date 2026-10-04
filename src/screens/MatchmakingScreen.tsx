@@ -17,14 +17,12 @@ import {
   Text,
   TouchableOpacity,
   ActivityIndicator,
-  Animated,
 } from 'react-native';
 import { COLORS, RADIUS, SPACING, TYPOGRAPHY, TOUCH_TARGET } from '../design/tokens';
 import { useTheme } from '../design/theme';
 import { Player, MatchmakingStatus } from '../domain/types';
 import {
   ProfileIcon,
-  ChevronIcon,
   CloseIcon,
   BingoIdentityIcon,
   UsersIcon,

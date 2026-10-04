@@ -6,7 +6,6 @@ import { CheckIcon, TrophyIcon, Icon, IconName, RankIcon, EditPencilIcon } from 
 import { StreakBarChart } from '../components/common/StreakBarChart';
 import { useTheme } from '../design/theme';
 import { leaderboardService } from '../domain/services/leaderboardService';
-import { supabase } from '../lib/supabase';
 import { globalModerationService } from '../domain/services/moderationService';
 
 type ProfileSection = 'Overview' | 'Achievements' | 'Match History';
@@ -29,8 +28,6 @@ export const ProfileScreen: React.FC<ProfileScreenProps> = ({
   playerName = 'Player_One',
   rating = 1000,
   tier = 'Bronze',
-  coins = 50380,
-  gems = 1000,
   onUpdateName,
   onLogout,
   onNavigateDeleteAccount,
