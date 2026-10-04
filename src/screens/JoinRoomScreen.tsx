@@ -33,7 +33,7 @@ export const JoinRoomScreen: React.FC<JoinRoomScreenProps> = ({
         const text = await navigator.clipboard.readText();
         if (text) setRoomId(sanitizeRoomCode(text));
       }
-    } catch {}
+    } catch (err) {}
   };
 
   const handleJoin = async () => {

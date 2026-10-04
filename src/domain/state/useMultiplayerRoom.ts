@@ -644,7 +644,7 @@ export function useMultiplayerRoom({ player, onNavigateToScreen, onMatchEnd }: U
           reason: `${player.name || 'Opponent'} disconnected. Match closed.`,
           disconnectedPlayerId: player.id,
         });
-      } catch {
+      } catch (err) {
         // Safe ignore
       }
     }
@@ -749,7 +749,7 @@ export function useMultiplayerRoom({ player, onNavigateToScreen, onMatchEnd }: U
           transport.send('SYNC_STATE_REQUEST', parsed.roomId, player.id, {});
           setRoomPageState('JOINING');
         }
-      } catch {
+      } catch (err) {
         // Safe ignore
       }
     };

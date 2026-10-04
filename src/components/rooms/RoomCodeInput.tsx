@@ -41,7 +41,7 @@ export const RoomCodeInput: React.FC<RoomCodeInputProps> = ({
           onChangeText(sanitizeRoomCode(clip));
         }
       }
-    } catch {}
+    } catch (err) {}
   };
 
   return (
