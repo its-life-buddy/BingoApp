@@ -257,7 +257,6 @@ export class MatchmakingService {
   /**
    * Handle ticket cancellation from other players
    */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
   private handleTicketCancelled(payload: any) {
     // Other player left queue, no action needed for current player
   }
@@ -275,7 +274,7 @@ export class MatchmakingService {
           event: 'ticket_cancelled',
           payload: { ticketId: this.currentTicket.ticketId, userId: this.currentTicket.userId },
         });
-      } catch (err) {
+      } catch (err) { // eslint-disable-line @typescript-eslint/no-unused-vars
         // Safe ignore
       }
     }

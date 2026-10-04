@@ -10,14 +10,10 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { PublicRoom, Player, Board5x5, GridCell5x5, RoomPrivacy } from '../types';
 import { RoomTransport, TransportMessage } from '../multiplayer/transport';
 import { AuthoritativeRoomServer, AuthoritativeRoomSnapshot } from '../multiplayer/authoritativeRoomServer';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { generateRoomId, hashPassword, sanitizeRoomCode, getHumanErrorMessage, validateRoomCodeFormat } from '../multiplayer/roomManager';
 import { AntiCheatValidator } from '../multiplayer/antiCheatValidator';
 import { evaluate5x5Wins, generate5x5Board } from '../engine/gridGameEngine';
 import { SoundEngine } from '../../audio/soundEngine';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { GameStateMachine, GameState } from './gameStateMachine';
 import { leaderboardService } from '../services/leaderboardService';
 
@@ -644,7 +640,7 @@ export function useMultiplayerRoom({ player, onNavigateToScreen, onMatchEnd }: U
           reason: `${player.name || 'Opponent'} disconnected. Match closed.`,
           disconnectedPlayerId: player.id,
         });
-      } catch (err) {
+      } catch (err) { // eslint-disable-line @typescript-eslint/no-unused-vars
         // Safe ignore
       }
     }
@@ -749,7 +745,7 @@ export function useMultiplayerRoom({ player, onNavigateToScreen, onMatchEnd }: U
           transport.send('SYNC_STATE_REQUEST', parsed.roomId, player.id, {});
           setRoomPageState('JOINING');
         }
-      } catch (err) {
+      } catch (err) { // eslint-disable-line @typescript-eslint/no-unused-vars
         // Safe ignore
       }
     };

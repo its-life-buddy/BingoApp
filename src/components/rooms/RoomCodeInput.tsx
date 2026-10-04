@@ -41,7 +41,7 @@ export const RoomCodeInput: React.FC<RoomCodeInputProps> = ({
           onChangeText(sanitizeRoomCode(clip));
         }
       }
-    } catch (err) {}
+    } catch (err) { } // eslint-disable-line @typescript-eslint/no-unused-vars
   };
 
   return (
