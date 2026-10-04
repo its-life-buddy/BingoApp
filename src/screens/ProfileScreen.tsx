@@ -140,6 +140,7 @@ export const ProfileScreen: React.FC<ProfileScreenProps> = ({
     return () => {
       mounted = false;
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playerId, playerName]);
 
   if (isLoading) {

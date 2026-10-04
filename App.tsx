@@ -224,7 +224,7 @@ function MainApp() {
             return;
           }
         }
-      } catch () {
+      } catch {
         // Fallback gracefully
       }
 
@@ -253,7 +253,7 @@ function MainApp() {
   const handleLogout = async () => {
     try {
       await supabase.auth.signOut();
-    } catch () {
+    } catch {
       // Safe ignore
     }
     await AsyncStorage.removeItem('bingo_user_session');

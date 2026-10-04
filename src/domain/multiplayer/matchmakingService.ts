@@ -275,7 +275,7 @@ export class MatchmakingService {
           event: 'ticket_cancelled',
           payload: { ticketId: this.currentTicket.ticketId, userId: this.currentTicket.userId },
         });
-      } catch () {
+      } catch {
         // Safe ignore
       }
     }
