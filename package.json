@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest --passWithNoTests",
-    "web": "webpack --mode development && serve dist -l 8082"
+    "web": "webpack --mode development && serve dist -l 8082",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@invertase/react-native-apple-authentication": "^2.5.1",
@@ -49,6 +50,7 @@
     "eslint": "^8.19.0",
     "html-webpack-plugin": "^5.6.8",
     "jest": "^29.6.3",
+    "patch-package": "^8.0.1",
     "prettier": "2.8.8",
     "react-native-dotenv": "^4.1.1",
     "react-test-renderer": "19.2.3",
@@ -62,4 +64,3 @@
     "node": ">= 22.11.0"
   }
 }
-
