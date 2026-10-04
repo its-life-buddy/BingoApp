@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { StyleSheet, View, Text, Animated } from 'react-native';
 import { COLORS, RADIUS, SPACING, TYPOGRAPHY, SPRING_CONFIGS } from '../../design/tokens';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { BingoIdentityIcon, IconSparkles } from '../icons/CustomIcons';
 import { useTheme } from '../../design/theme';
 

@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { GridCell5x5 } from '../../domain/types';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { COLORS, RADIUS, SPACING, TOUCH_TARGET, TYPOGRAPHY } from '../../design/tokens';
 import { BingoIdentityIcon, MarkIcon } from '../icons/CustomIcons';
 import { useTheme } from '../../design/theme';

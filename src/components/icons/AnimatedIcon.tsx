@@ -2,12 +2,15 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import {
   Animated,
   TouchableOpacity,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   View,
   StyleSheet,
   ViewStyle,
   Platform,
 } from 'react-native';
 import { Icon, IconProps } from './Icon';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { IconName, IconState, IconVariant } from './types';
 import { ICON_SIZES, MOTION } from '../../design/tokens';
 

@@ -9,6 +9,7 @@ import {
 import { COLORS, RADIUS, SPACING, TYPOGRAPHY } from '../../design/tokens';
 import { useTheme } from '../../design/theme';
 import { Player, MatchmakingStatus, PublicRoom } from '../../domain/types';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { UsersIcon, CheckIcon, CloseIcon } from '../icons/CustomIcons';
 import { StatusBadge } from '../shared/StatusBadge';
 
@@ -26,6 +27,7 @@ export interface RandomPlayerCardProps {
 export const RandomPlayerCard: React.FC<RandomPlayerCardProps> = ({
   state = 'IDLE',
   opponent,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   room,
   onlineCount = 1240,
   onFindPlayer,

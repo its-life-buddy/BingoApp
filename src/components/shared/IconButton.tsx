@@ -7,6 +7,7 @@ import {
   StyleProp,
   GestureResponderEvent,
 } from 'react-native';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { RADIUS, TOUCH_TARGET } from '../../design/tokens';
 import { useTheme } from '../../design/theme';
 

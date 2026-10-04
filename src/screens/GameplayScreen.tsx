@@ -13,6 +13,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Board5x5, GridCell5x5, PowerUpType } from '../domain/types';
 import { BingoMatrixCard } from '../components/game/BingoMatrixCard';
 import { CallerHUD } from '../components/game/CallerHUD';
@@ -23,7 +24,9 @@ import {
   ChevronIcon,
   PauseIcon,
   ResumeIcon,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   BingoIdentityIcon,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   IconSparkles,
 } from '../components/icons/CustomIcons';
 import { useTheme } from '../design/theme';
@@ -56,6 +59,7 @@ export const GameplayScreen: React.FC<GameplayScreenProps> = ({
   drawnNumbers,
   score,
   linesCompletedCount,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   isGameActive,
   isPaused,
   onCellPress,

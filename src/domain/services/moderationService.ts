@@ -14,6 +14,7 @@ import {
   UserBlock,
   UserModerationState,
   EnforcementLevel,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   PostStatus,
 } from '../types';
 
@@ -568,6 +569,7 @@ export class ModerationService {
     userId: string,
     level: EnforcementLevel,
     durationMs?: number,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
     reason?: string
   ): Promise<UserModerationState> {
     const state = await this.getModerationState(userId);

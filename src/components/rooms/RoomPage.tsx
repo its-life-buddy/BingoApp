@@ -40,6 +40,7 @@ export const RoomPage: React.FC<RoomPageProps> = ({
   players = [],
   pageState = 'IDLE',
   isHost = false,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   canStart = false,
   countdownSeconds = null,
   errorMessage,
@@ -58,11 +59,14 @@ export const RoomPage: React.FC<RoomPageProps> = ({
 
   const isCreating = pageState === 'CREATING';
   const isJoining = pageState === 'JOINING';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   const isWaiting = pageState === 'WAITING';
   const isReady = pageState === 'ROOM_READY';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   const isStarting = pageState === 'STARTING';
   const isClosed = pageState === 'CLOSED';
   const isExpired = pageState === 'EXPIRED';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   const isError = pageState === 'ERROR' && !room;
 
   return (

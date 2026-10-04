@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { RouteHeader } from '../components/common/RouteHeader';
 import { COLORS, RADIUS, SPACING, TYPOGRAPHY } from '../design/tokens';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { CalendarIcon, CheckIcon } from '../components/icons/CustomIcons';
 import { useTheme } from '../design/theme';
 

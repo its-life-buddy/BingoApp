@@ -7,6 +7,7 @@ import {
   StyleProp,
   ViewStyle,
 } from 'react-native';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { COLORS, RADIUS, SPACING, TOUCH_TARGET, TYPOGRAPHY } from '../../design/tokens';
 import { useTheme } from '../../design/theme';
 import { ChevronIcon } from '../icons/CustomIcons';

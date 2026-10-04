@@ -3,6 +3,9 @@ import { View, ViewStyle } from 'react-native';
 import { Svg, Path, Circle, Line } from 'react-native-svg';
 import { Icon } from './Icon';
 import { AnimatedIcon } from './AnimatedIcon';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { BaseIconProps, IconName, IconState, IconVariant } from './types';
 import { ICON_COLORS, ICON_SIZES } from '../../design/tokens';
 

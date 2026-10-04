@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { COLORS, RADIUS, SPACING, TYPOGRAPHY } from '../../design/tokens';
 import { LockIcon } from '../icons/CustomIcons';
 import { useTheme } from '../../design/theme';

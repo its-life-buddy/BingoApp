@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, ScrollView, TouchableOpacity } from 'react-native';
 import { LeaderboardEntry, Player } from '../domain/types';
 import { COLORS, RADIUS, SPACING, TYPOGRAPHY } from '../design/tokens';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { TrophyIcon, RankIcon, CheckIcon } from '../components/icons/CustomIcons';
 import { useTheme } from '../design/theme';
 import { leaderboardService } from '../domain/services/leaderboardService';

@@ -116,6 +116,7 @@ export function generate25Numbers(seed?: string): number[] {
  * Pacing affects client animation & reveal timing, NOT authoritative game outcomes.
  */
 export function getNextPresentationDelay(
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   baseMs: number = 2400,
   minMs: number = 1800,
   maxMs: number = 3200

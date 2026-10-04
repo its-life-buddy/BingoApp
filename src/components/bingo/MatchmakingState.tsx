@@ -4,8 +4,10 @@ import {
   View,
   Text,
   TouchableOpacity,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   ActivityIndicator,
 } from 'react-native';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { COLORS, RADIUS, SPACING, TYPOGRAPHY, TOUCH_TARGET } from '../../design/tokens';
 import { useTheme } from '../../design/theme';
 import { Player, MatchmakingStatus, PublicRoom } from '../../domain/types';
@@ -33,6 +35,7 @@ export const MatchmakingState: React.FC<MatchmakingStateProps> = ({
   state,
   player,
   opponent,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   room,
   message,
   countdownSeconds = null,

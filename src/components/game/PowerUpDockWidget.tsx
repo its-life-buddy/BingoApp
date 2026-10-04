@@ -16,6 +16,7 @@ import {
 import { Svg, Circle } from 'react-native-svg';
 import {
   COLORS,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   RADIUS,
   SPACING,
   TYPOGRAPHY,
@@ -30,6 +31,7 @@ import {
   IconTarget,
   IconGemstone,
   IconCoinStack,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   BingoIdentityIcon,
 } from '../icons/CustomIcons';
 

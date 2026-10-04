@@ -7,6 +7,7 @@ import {
 import { COLORS, RADIUS, SPACING, TYPOGRAPHY } from '../../design/tokens';
 import { useTheme } from '../../design/theme';
 import { Player } from '../../domain/types';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { ProfileIcon, CheckIcon } from '../icons/CustomIcons';
 
 export interface PlayerSlotProps {

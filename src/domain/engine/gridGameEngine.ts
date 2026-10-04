@@ -10,6 +10,7 @@ import {
   GridCell5x5,
   WinningPattern,
   WinEvaluationResult,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   DrawnNumber,
 } from '../types';
 

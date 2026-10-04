@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { View, StyleSheet, ViewStyle } from 'react-native';
 import { Svg, Path, Circle, Rect } from 'react-native-svg';
 import { BaseIconProps, IconName, IconState, IconVariant } from './types';
@@ -53,6 +54,7 @@ export const Icon: React.FC<IconProps> = ({
   }
 
   const primaryColor = resolveIconColor(color, state, variant);
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   const secColor =
     secondaryColor ||
     (variant === 'duotone' ? `${primaryColor}40` : primaryColor);

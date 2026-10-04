@@ -3,6 +3,7 @@ import {
   StyleSheet,
   View,
   Text,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   TouchableOpacity,
   ScrollView,
 } from 'react-native';

@@ -21,6 +21,7 @@ import { TermsAcceptanceModal } from './TermsAcceptanceModal';
 import { CheckIcon, WarningIcon, UsersIcon } from '../icons/CustomIcons';
 
 interface CommunityFeedSectionProps {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   player: Player;
 }
 
@@ -31,6 +32,7 @@ interface CommunityFeedSectionProps {
  * EULA consent gates, reporting, user blocking, and local post hiding.
  */
 export const CommunityFeedSection: React.FC<CommunityFeedSectionProps> = ({ player }) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { theme } = useTheme();
 
   const [posts, setPosts] = useState<UgcPost[]>([]);

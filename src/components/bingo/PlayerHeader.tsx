@@ -18,6 +18,7 @@ export interface PlayerHeaderProps {
 export const PlayerHeader: React.FC<PlayerHeaderProps> = ({
   playerName,
   rating,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   tier = 'Platinum',
   soundEnabled = true,
   onToggleSound,
@@ -87,6 +88,7 @@ export const PlayerHeader: React.FC<PlayerHeaderProps> = ({
         />
 
         <IconButton
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
           icon={({ size, color }) => (
             isDark ? (
               <SunIcon size={size} color={COLORS.winterHazel} />

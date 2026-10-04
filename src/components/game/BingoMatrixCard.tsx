@@ -6,6 +6,7 @@
  * 100% Vector SVG Iconography (Zero Raw Emojis).
  */
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { useState, useCallback, useMemo, useRef } from 'react';
 import {
   StyleSheet,

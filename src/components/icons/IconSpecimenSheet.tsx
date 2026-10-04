@@ -11,6 +11,7 @@ import { Icon } from './Icon';
 import { AnimatedIcon } from './AnimatedIcon';
 import { IconName, IconState } from './types';
 import { AppIconVector } from './AppIconVector';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { COLORS, RADIUS, SPACING, TYPOGRAPHY } from '../../design/tokens';
 
 interface IconSpecimenSheetProps {

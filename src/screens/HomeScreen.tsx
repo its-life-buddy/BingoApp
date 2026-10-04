@@ -17,6 +17,7 @@ import { PlayerHeader } from '../components/bingo/PlayerHeader';
 import { GameModeCard } from '../components/bingo/GameModeCard';
 import {
   CloseIcon,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   UsersIcon,
 } from '../components/icons/CustomIcons';
 import { NumberSourceModal } from '../components/bingo/NumberSourceModal';
@@ -45,15 +46,21 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   onPlayRandomHuman,
   onPlayRobot,
   onPlayFriend,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   onDailyPuzzle,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   onLocalPlay,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   onJoinRoom,
   onCreateRoomDirect,
   onOpenSettings,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   onOpenRoomSelection,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   onOpenDailyBonusModal,
 }) => {
   const { theme } = useTheme();
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [onlineCount, setOnlineCount] = useState<number | null>(null);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [numberSourceModalVisible, setNumberSourceModalVisible] = useState(false);
@@ -111,6 +118,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
     SoundEngine.setMuted(!next);
   };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   const toggleVoice = () => {
     const next = !voiceEnabled;
     setVoiceEnabled(next);

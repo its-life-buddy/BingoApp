@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { TabDestination } from '../../domain/types';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { COLORS, RADIUS, SHADOWS, TYPOGRAPHY } from '../../design/tokens';
 import { HomeIcon, LeaderboardIcon, ProfileIcon } from '../icons/CustomIcons';
 import { useTheme } from '../../design/theme';

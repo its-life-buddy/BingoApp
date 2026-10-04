@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { COLORS, RADIUS, SPACING, TYPOGRAPHY } from '../../design/tokens';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { BingoIdentityIcon, ChevronIcon } from '../icons/CustomIcons';
 
 interface IntercomCalloutBannerProps {

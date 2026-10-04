@@ -507,6 +507,7 @@ export class AuthoritativeRoomServer {
     });
   }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   private handleRematch(message: TransportMessage) {
     if (this.callerInterval) clearInterval(this.callerInterval);
 

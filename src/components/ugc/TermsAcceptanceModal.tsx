@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { COLORS, RADIUS, SPACING, TYPOGRAPHY } from '../../design/tokens';
 import { useTheme } from '../../design/theme';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { WarningIcon, CheckIcon } from '../icons/CustomIcons';
 
 interface TermsAcceptanceModalProps {

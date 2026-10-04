@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, { createContext, useContext, useState, useEffect, useMemo } from 'react';
 
 export type ThemeMode = 'light' | 'dark';

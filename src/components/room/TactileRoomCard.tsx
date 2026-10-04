@@ -27,6 +27,7 @@ import { PublicRoom } from '../../domain/types';
 import {
   IconTicket,
   IconCoinStack,
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   IconShield,
   BingoIdentityIcon,
   ChevronIcon,
@@ -51,6 +52,7 @@ export const TactileRoomCard: React.FC<TactileRoomCardProps> = ({
 }) => {
   const { theme } = useTheme();
   const [ticketCount, setTicketCount] = useState<number>(selectedTicketCount);
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isCardPressed, setIsCardPressed] = useState(false);
   const [isBtnPressed, setIsBtnPressed] = useState(false);
 

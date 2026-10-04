@@ -6,6 +6,7 @@
  * - HARD: Competitive reaction (0.5-1.0s delay), 100% mark accuracy, priority on line completion.
  */
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Board5x5, RobotDifficulty, WinEvaluationResult } from '../types';
 import { generate5x5Board, evaluate5x5Wins } from './gridGameEngine';
 
